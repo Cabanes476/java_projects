@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="330.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControladorOpciones">
+   <children>
+      <Label layoutX="184.0" layoutY="14.0" text="Membrana">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_RIGHT" layoutX="31.0" layoutY="56.0" spacing="13.0">
+         <children>
+            <Label layoutX="52.0" layoutY="72.0" text="Resistencia(MOhm)" />
+            <Label layoutX="52.0" layoutY="97.0" text="Constante tiempo(tau)(ms)" />
+            <Label text="Potencial reposo(mV)" />
+            <Label text="Potencial umbral disparo(mV)" />
+            <Label text="Voltaje reseteo(mV)" />
+            <Label text="Voltaje pico(mV)" />
+         </children>
+      </VBox>
+      <VBox layoutX="237.0" layoutY="46.0" spacing="5.0">
+         <children>
+            <TextField fx:id="tResistencia" layoutX="177.0" layoutY="65.0" />
+            <TextField fx:id="tConstTiempo" layoutX="177.0" layoutY="90.0" />
+            <TextField fx:id="tPotencialReposo" />
+            <TextField fx:id="tPotencialUmbral" />
+            <TextField fx:id="tVoltReset" />
+            <TextField fx:id="tVoltPico" />
+         </children>
+      </VBox>
+      <Label layoutX="595.0" layoutY="14.0" text="Tiempo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_RIGHT" layoutX="451.0" layoutY="50.0" spacing="13.0">
+         <children>
+            <Label layoutX="411.0" layoutY="71.0" text="Duracion(ms)" />
+            <Label layoutX="411.0" layoutY="96.0" text="Inicio del estimulo(ms)" />
+            <Label text="Fin del estimulo(ms)" />
+            <Label text="Resolucion temporal(ms)" />
+         </children>
+      </VBox>
+      <Label layoutX="538.0" layoutY="196.0" text="Corriente inyectada">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="453.0" layoutY="236.0" text="Intensidad del pulso(nA)" />
+      <TextField fx:id="tIntensidad" layoutX="625.0" layoutY="229.0" />
+      <VBox layoutX="628.0" layoutY="43.0" spacing="5.0">
+         <children>
+            <TextField fx:id="tDuracion" layoutX="556.0" layoutY="50.0" />
+            <TextField fx:id="tComienzoEstimulo" layoutX="556.0" layoutY="75.0" />
+            <TextField fx:id="tFinalEstimulo" layoutX="556.0" layoutY="109.0" />
+            <TextField fx:id="tResolucionTemp" layoutX="556.0" layoutY="145.0" />
+         </children>
+      </VBox>
+      <Button fx:id="bGenerar" layoutX="625.0" layoutY="276.0" mnemonicParsing="false" onAction="#generarGraficas" text="Generar" />
+      <Button fx:id="bLimpiar" layoutX="714.0" layoutY="276.0" mnemonicParsing="false" onAction="#limpiar" text="Limpiar datos" />
+      <Button fx:id="bPredet" layoutX="31.0" layoutY="278.0" mnemonicParsing="false" onAction="#def" prefHeight="27.0" prefWidth="182.0" text="Valores predeterminados" />
+   </children>
+</AnchorPane>
